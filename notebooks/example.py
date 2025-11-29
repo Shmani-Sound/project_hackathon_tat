@@ -1,7 +1,7 @@
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from tqdm import tqdm
-test_file = "Датасет_для_обучения_модели_Аскар.csv"
+test_file = "train.csv"
 df_test = pd.read_csv(test_file, sep="\t")
 df_test.columns = df_test.columns.str.strip()
 assert "ID" in df_test.columns
